@@ -7,20 +7,23 @@ class Api::V1::TiendasController < ApplicationController
         if tienda
             render json: tienda, status: :ok
         else
-            render json: {message: "Tienda vacía"}, status: :unprocessable_entity
+            render json: {message: "La colección de Tienda está vacía"}, status: :unprocessable_entity
         end
     end
 
 
     def addTienda
         tienda = Tienda.new(
-        nombre: params[:nombre],
-        telefono: params[:telefono],
-        horario: params[:horario],
-        direccion_calle: params[:direccion_calle],
-        direccion_ciudad: params[:direccion_ciudad],
-        direccion_estado: params[:direccion_estado],
-        direccion_pais: params[:direccion_pais])
+            nombre: params[:nombre],
+            telefono: params[:telefono],
+            horario: params[:horario],
+            direccion: Direccion.new(
+              calle: params[:direccion_calle],
+              ciudad: params[:direccion_ciudad],
+              estado: params[:direccion_estado],
+              pais: params[:direccion_pais]
+            )
+          )
 
         if tienda.save()
             render json: tienda, status: :ok
@@ -68,10 +71,9 @@ class Api::V1::TiendasController < ApplicationController
             :nombre,
             :telefono,
             :horario,
-            :direccion_calle,
-            :direccion_ciudad,
-            :direccion_estado,
-            :direccion_pais)
+            direccion: [:calle, :ciudad, :estado, :pais],
+            empleados_attributes: [:primerNombre, :segundoNombre, :apellidoPaterno, :apellidoMaterno, :correo, :telefono, :puesto, :fechaContratacion]
+            )
         end
 
         def getTienda

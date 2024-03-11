@@ -3,14 +3,22 @@ class Tienda
   include Mongoid::Timestamps
 
   field :nombre, type: String
+  field :ciudad, type: String
   field :telefono, type: String
   field :horario, type: String
 
-  field :direccion_calle, type: String
-  field :direccion_ciudad, type: String
-  field :direccion_estado, type: String
-  field :direccion_pais, type: String
+  embeds_one :direccion
+end
 
-  # embeds_many :empleados
+class Direccion
 
+  field :calle, type: String
+  field :numero, type: String
+  field :colonia, type: String
+  field :ciudad, type: String
+  field :estado, type: String
+  field :codigoPostal, type: Integer
+  field :pais, type: String
+
+  embedded_in :tienda
 end

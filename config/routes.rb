@@ -10,6 +10,16 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+
+      #rutas referentes a los empleado
+      get 'getEmpleados', action: :getEmpleados, controller: :empleados
+      post 'addEmpleado', action: :addEmpleado,controller: :empleados
+      get 'showEmpleado', action: :showEmpleado,controller: :empleados
+      put 'updateEmpleado', action: :updateEmpleado,controller: :empleados
+      delete 'deleteEmpleado', action: :deleteEmpleado,controller: :empleados
+
+
+      #rutas referentes a las tiendas
       get 'getTiendas', action: :getTiendas, controller: :tiendas
       post 'addTienda', action: :addTienda,controller: :tiendas
       get 'showTienda', action: :showTienda,controller: :tiendas
