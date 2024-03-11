@@ -3,7 +3,6 @@ class Tienda
   include Mongoid::Timestamps
 
   field :nombre, type: String
-  field :ciudad, type: String
   field :telefono, type: String
   field :horario, type: String
 
@@ -11,6 +10,7 @@ class Tienda
 end
 
 class Direccion
+  include Mongoid::Document
 
   field :calle, type: String
   field :numero, type: String

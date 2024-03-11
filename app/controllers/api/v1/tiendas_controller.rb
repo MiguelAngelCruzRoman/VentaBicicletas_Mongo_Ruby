@@ -21,7 +21,10 @@ class Api::V1::TiendasController < ApplicationController
               calle: params[:direccion_calle],
               ciudad: params[:direccion_ciudad],
               estado: params[:direccion_estado],
-              pais: params[:direccion_pais]
+              pais: params[:direccion_pais],
+              codigoPostal: params[:direccion_codigoPostal],
+              colonia: params[:direccion_colonia],
+              numero: params[:direccion_numero]
             )
           )
 
@@ -71,9 +74,7 @@ class Api::V1::TiendasController < ApplicationController
             :nombre,
             :telefono,
             :horario,
-            direccion: [:calle, :ciudad, :estado, :pais],
-            empleados_attributes: [:primerNombre, :segundoNombre, :apellidoPaterno, :apellidoMaterno, :correo, :telefono, :puesto, :fechaContratacion]
-            )
+            direccion:[:direccion_calle,:direccion_ciudad,:direccion_estado,:direccion_pais,:direccion_codigoPostal,:direccion_colonia,:direccion_numero])
         end
 
         def getTienda

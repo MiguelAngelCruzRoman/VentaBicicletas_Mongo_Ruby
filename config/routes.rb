@@ -11,6 +11,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 
+      #rutas referentes a las bicicletas
+      get 'getBicicleta', action: :getBicicletas, controller: :bicicletas
+      post 'addBicicleta', action: :addBicicleta,controller: :bicicletas
+      get 'showBicicleta', action: :showBicicleta,controller: :bicicletas
+      put 'updateBicicleta', action: :updateBicicleta,controller: :bicicletas
+      delete 'deleteBicicleta', action: :deleteBicicleta,controller: :bicicletas
+
+
       #rutas referentes a los empleado
       get 'getEmpleados', action: :getEmpleados, controller: :empleados
       post 'addEmpleado', action: :addEmpleado,controller: :empleados
