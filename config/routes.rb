@@ -10,7 +10,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get 'getTiendas', action: :getTiendas, controller: :tiendas
       post 'addTienda', action: :addTienda,controller: :tiendas
+      get 'showTienda', action: :showTienda,controller: :tiendas
+      put 'updateTienda', action: :updateTienda,controller: :tiendas
+      delete 'deleteTienda', action: :deleteTienda,controller: :tiendas
     end
   end
 end
