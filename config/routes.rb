@@ -33,6 +33,14 @@ Rails.application.routes.draw do
       get 'showTienda', action: :showTienda,controller: :tiendas
       put 'updateTienda', action: :updateTienda,controller: :tiendas
       delete 'deleteTienda', action: :deleteTienda,controller: :tiendas
+
+
+      #rutas referentes a las ventas
+      get 'getVentas', action: :getVentas, controller: :ventas
+      post 'addVenta', action: :addVenta,controller: :ventas
+      get 'showVenta', action: :showVenta,controller: :ventas
+      put 'updateVenta', action: :updateVenta,controller: :ventas
+      delete 'deleteVenta', action: :deleteVenta,controller: :ventas
     end
   end
 end
