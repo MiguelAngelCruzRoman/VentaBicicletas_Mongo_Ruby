@@ -1,0 +1,26 @@
+development:
+  clients:
+    default:
+      database: VentaBicicletas
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
+test:
+  clients:
+    default:
+      database: myapp_test
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
+
+production:
+  clients:
+    default:
+      database: myapp_production
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
