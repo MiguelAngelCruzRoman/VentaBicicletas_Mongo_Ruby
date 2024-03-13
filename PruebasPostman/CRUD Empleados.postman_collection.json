@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "da267580-b9cc-4995-88d0-e1e189cea4ec",
+		"name": "CRUD Empleados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33509521"
+	},
+	"item": [
+		{
+			"name": "Agregar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/addEmpleado?primerNombre=Jhonny&apellidoPaterno=Laboriel&apellidoMaterno=Medina&correo=correo@empresa.com&telefono=9638527411&puesto=Recepcionista&fechaContratacion=20230820",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"addEmpleado"
+					],
+					"query": [
+						{
+							"key": "primerNombre",
+							"value": "Jhonny"
+						},
+						{
+							"key": "segundoNombre",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "apellidoPaterno",
+							"value": "Laboriel"
+						},
+						{
+							"key": "apellidoMaterno",
+							"value": "Medina"
+						},
+						{
+							"key": "correo",
+							"value": "correo@empresa.com"
+						},
+						{
+							"key": "telefono",
+							"value": "9638527411"
+						},
+						{
+							"key": "puesto",
+							"value": "Recepcionista"
+						},
+						{
+							"key": "fechaContratacion",
+							"value": "20230820"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/showEmpleado?id=65ee6afc34f51130ec29eae5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"showEmpleado"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee6afc34f51130ec29eae5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/getEmpleados",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"getEmpleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "65ee3b2f34f51149906b144d",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "11111111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/updateEmpleado?id=65ee6afc34f51130ec29eae5&primerNombre=Juan&segundoNombre=Carlos&apellidoPaterno=Morales&apellidoMaterno=Rodríguez&puesto=Director&telefono=9756432186",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"updateEmpleado"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee6afc34f51130ec29eae5"
+						},
+						{
+							"key": "primerNombre",
+							"value": "Juan"
+						},
+						{
+							"key": "segundoNombre",
+							"value": "Carlos"
+						},
+						{
+							"key": "apellidoPaterno",
+							"value": "Morales"
+						},
+						{
+							"key": "apellidoMaterno",
+							"value": "Rodríguez"
+						},
+						{
+							"key": "puesto",
+							"value": "Director"
+						},
+						{
+							"key": "telefono",
+							"value": "9756432186"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/deleteEmpleado?id=65ee6b3834f51130ec29eae6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"deleteEmpleado"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee6b3834f51130ec29eae6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

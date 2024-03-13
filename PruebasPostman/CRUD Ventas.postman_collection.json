@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "50304157-ccdc-412f-80e7-f4edffba8a5a",
+		"name": "CRUD Ventas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33509521"
+	},
+	"item": [
+		{
+			"name": "Agregar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/addVenta?tienda_id=65ee3b2f34f51149906b144d&empleado_id=65ee6aef34f51130ec29eae4&monto_total=865450&fecha_venta=20240310&metodo_pago=Efectivo&observaciones=Se rompió al salir&bicicleta_vendida_producto_id=65ee7f7d34f51109e07967a1&bicicleta_vendida_cantidad=4&datos_cliente_nombre=Yo&datos_cliente_apellido=Mero&datos_cliente_correo=cliente@correo.com&datos_cliente_telefono=1234567989",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"addVenta"
+					],
+					"query": [
+						{
+							"key": "tienda_id",
+							"value": "65ee3b2f34f51149906b144d"
+						},
+						{
+							"key": "empleado_id",
+							"value": "65ee6aef34f51130ec29eae4"
+						},
+						{
+							"key": "monto_total",
+							"value": "865450"
+						},
+						{
+							"key": "fecha_venta",
+							"value": "20240310"
+						},
+						{
+							"key": "metodo_pago",
+							"value": "Efectivo"
+						},
+						{
+							"key": "observaciones",
+							"value": "Se rompió al salir"
+						},
+						{
+							"key": "bicicleta_vendida_producto_id",
+							"value": "65ee7f7d34f51109e07967a1"
+						},
+						{
+							"key": "bicicleta_vendida_cantidad",
+							"value": "4"
+						},
+						{
+							"key": "datos_cliente_nombre",
+							"value": "Yo"
+						},
+						{
+							"key": "datos_cliente_apellido",
+							"value": "Mero"
+						},
+						{
+							"key": "datos_cliente_correo",
+							"value": "cliente@correo.com"
+						},
+						{
+							"key": "datos_cliente_telefono",
+							"value": "1234567989"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/showVenta?id=65ee871134f511290c8fd583",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"showVenta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee871134f511290c8fd583"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/getVentas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"getVentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/updateVenta?id=65ee871134f511290c8fd583&tienda_id=65ee3b2f34f51149906b144d&empleado_id=65ee6aef34f51130ec29eae4&monto_total=11111111&fecha_venta=20200202&metodo_pago=Humo&observaciones=Se le vendió una bici rota&bicicleta_vendida_producto_id=65ee7f7d34f51109e07967a1&bicicleta_vendida_cantidad=1&datos_cliente_nombre=Tu&datos_cliente_apellido=Lipan&datos_cliente_correo=clienteCorregido@correo.com&datos_cliente_telefono=987654321",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"updateVenta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee871134f511290c8fd583"
+						},
+						{
+							"key": "tienda_id",
+							"value": "65ee3b2f34f51149906b144d"
+						},
+						{
+							"key": "empleado_id",
+							"value": "65ee6aef34f51130ec29eae4"
+						},
+						{
+							"key": "monto_total",
+							"value": "11111111"
+						},
+						{
+							"key": "fecha_venta",
+							"value": "20200202"
+						},
+						{
+							"key": "metodo_pago",
+							"value": "Humo"
+						},
+						{
+							"key": "observaciones",
+							"value": "Se le vendió una bici rota"
+						},
+						{
+							"key": "bicicleta_vendida_producto_id",
+							"value": "65ee7f7d34f51109e07967a1"
+						},
+						{
+							"key": "bicicleta_vendida_cantidad",
+							"value": "1"
+						},
+						{
+							"key": "datos_cliente_nombre",
+							"value": "Tu"
+						},
+						{
+							"key": "datos_cliente_apellido",
+							"value": "Lipan"
+						},
+						{
+							"key": "datos_cliente_correo",
+							"value": "clienteCorregido@correo.com"
+						},
+						{
+							"key": "datos_cliente_telefono",
+							"value": "987654321"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Copy 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/deleteVenta?id=65ee882334f511290c8fd586",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"deleteVenta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65ee882334f511290c8fd586"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
