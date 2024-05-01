@@ -10,7 +10,7 @@ development:
 test:
   clients:
     default:
-      database: myapp_test
+      database: VentaBicicletas
       hosts:
         - localhost:27017
   options:
@@ -19,7 +19,7 @@ test:
 production:
   clients:
     default:
-      database: myapp_production
+      database: VentaBicicletas
       hosts:
         - localhost:27017
   options:

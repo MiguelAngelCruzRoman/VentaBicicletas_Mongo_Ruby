@@ -26,13 +26,17 @@ Rails.application.routes.draw do
       put 'updateEmpleado', action: :updateEmpleado,controller: :empleados
       delete 'deleteEmpleado', action: :deleteEmpleado,controller: :empleados
 
-
-      #rutas referentes a las tiendas
-      get 'getTiendas', action: :getTiendas, controller: :tiendas
-      post 'addTienda', action: :addTienda,controller: :tiendas
-      get 'showTienda', action: :showTienda,controller: :tiendas
-      put 'updateTienda', action: :updateTienda,controller: :tiendas
-      delete 'deleteTienda', action: :deleteTienda,controller: :tiendas
+      resources :tiendas do
+        collection do
+          get :getTiendas
+          post :addTienda
+        end
+        member do
+          get :showTienda
+          patch :updateTienda
+          delete :deleteTienda
+        end
+      end
 
 
       #rutas referentes a las ventas

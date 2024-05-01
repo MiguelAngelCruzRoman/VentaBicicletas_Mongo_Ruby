@@ -3,13 +3,14 @@ class Api::V1::TiendasController < ApplicationController
 
 
     def getTiendas
-        tienda =Tienda.all
-        if tienda
-            render json: tienda, status: :ok
+        @tiendas = Tienda.all
+        if @tiendas.any?
+          render 'index', status: :ok
         else
-            render json: {message: "La colección de Tienda está vacía"}, status: :unprocessable_entity
+          render json: { message: "La colección de Tienda está vacía" }, status: :unprocessable_entity
         end
-    end
+      end
+      
 
 
     def addTienda

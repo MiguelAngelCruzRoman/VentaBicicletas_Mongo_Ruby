@@ -1,0 +1,26 @@
+<h1>Tiendas</h1>
+
+<% if @tiendas.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Horario</th>
+        <!-- Agrega más columnas según la estructura de tu modelo -->
+      </tr>
+    </thead>
+    <tbody>
+      <% @tiendas.each do |tienda| %>
+        <tr>
+          <td><%= tienda['nombre'] %></td>
+          <td><%= tienda['telefono'] %></td>
+          <td><%= tienda['horario'] %></td>
+          <!-- Renderiza más atributos según la estructura de tu modelo -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No hay tiendas disponibles.</p>
+<% end %>
